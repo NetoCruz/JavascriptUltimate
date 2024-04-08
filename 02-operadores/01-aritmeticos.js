@@ -12,3 +12,4 @@ console.log(a**b,'potencia');//potencia
 console.log(++a)
 //decrementar
 console.log(--a)
+
