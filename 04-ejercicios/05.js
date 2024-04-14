@@ -1,22 +1,18 @@
 
-let array=[80,5,7,15,2,100,55]
-let i=0
-let newArray=[]
-// let minus = 0
+let array=[80,5,7,15,1,100,55]
 
 
- while(i<array.length){
+function getMenorMayor(arr){
+   let menor =arr[0]
+   let mayor=arr[0]
 
-      let minus = array[0]
-      if(minus<array[i+1]){
-         //  array[i] == array[i+1]
-        
-     
-            console.log(array[i]) 
-          
-        } //else{ array[i] == array[i+1]}
-     i++
-     //console.log(newArray) 
-   
+   for ( numero of arr) {
+      menor = menor < numero ? menor : numero
+      mayor = mayor > numero ? mayor : numero
+   }
+   return [menor,mayor]
+}
 
- }
+
+let numeros = getMenorMayor(array)
+console.log(numeros)
