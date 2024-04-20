@@ -2,24 +2,35 @@
 
 //function obtenerNumeroPrimo(){
 
-let numbers=[2,3,4,5,6,7,8,9,10]
+let numbers=[]
 let result=[]
 let operator=[]
-    // for(i=2; i<=10; i++){
-    //     numbers.push(i)
-    // }
+    for(i=2; i<=100; i++){
+        numbers.push(i)
+    }
 
-    numbers.forEach(element => {
-             for (let i = 0; i<numbers.length-1; i++) {
-                let re =element % numbers[i+1]
-                result.push(re)
-                //console.log(element,re)
-                  // if (element % numbers[i] === 0) {
-                  //  console.log(element,'numero natural')
-                  // }
+    function isPrime(num){
+    
+      
+                for (let i = 2; num > i; i++) {
+                  if (num % i === 0) {
+                    return false;
+                  }
                 }
+                return num > 1;
+              
+            //  for (let i = 0; i<numbers.length-1; i++) {
+            //     let re =element % numbers[i+1]
+            //     result.push(re)
+            //     //console.log(element,re)
+            //       // if (element % numbers[i] === 0) {
+            //       //  console.log(element,'numero natural')
+            //       // }
+            //     }
                 
-    });
+    }
+
+    console.log(numbers.filter(isPrime));
 //     const resultados = {}
 // for (const el of result) resultados[el] = resultados[el] + 1 || 1
 
